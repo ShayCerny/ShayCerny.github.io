@@ -2,6 +2,7 @@ const canvas = document.getElementById("rain");
 const ctx = canvas.getContext("2d");
 const hero = document.querySelector(".hero-card");
 
+
 // -----------------------------
 // Canvas setup
 // -----------------------------
@@ -105,7 +106,7 @@ function drawRain() {
 		if (mouse.x !== null) {
 			const d = distance(drop.x, drop.y, mouse.x, mouse.y);
 
-			if (d < mouse.radius && drop.y < mouse.y) {
+			if (window.innerWidth >= 900 && (d < mouse.radius && drop.y < mouse.y)) {
 				drop.rolling = true;
 
 				const angle = Math.atan2(drop.y - mouse.y, drop.x - mouse.x);
