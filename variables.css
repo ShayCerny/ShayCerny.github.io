@@ -1,0 +1,32 @@
+:root {
+	--background-color: #202232;
+	--text-color: #fff9d6;
+
+	--glass-bg: rgba(24, 26, 39, 0.55);
+	--glass-border: rgba(109, 252, 255, 0.15);
+	--glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+	--glass-hover: 0 15px 50px rgba(0, 0, 0, 0.6), 0 0 10px var(--neon-cyan);
+
+	/* Primary neon */
+	--neon-cyan: #6dfcff;
+
+	/* Secondary neon accents */
+	--neon-pink: #ff4fd8;
+	--neon-purple: #8b5cff;
+	--neon-blue: #4da6ff;
+
+	/* Glow presets */
+	--glow-soft: 0 0 10px;
+	--glow-medium: 0 0 20px;
+	--glow-hard: 0 0 35px;
+}
+
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(10px);
+	}
+}
