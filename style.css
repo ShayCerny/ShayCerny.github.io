@@ -56,7 +56,7 @@ section {
 
 #scene-city {
 	position: absolute;
-	height: calc(100% + 150vh);
+	height: 300%;
 	width: 100vw;
 	background-image: url(./images/cyberpunk-city.png);
 	background-size: cover;
@@ -85,7 +85,7 @@ section {
 }
 
 .hero-card {
-	width: 520px;
+	width: 70%;
 	padding: 3rem;
 	background: rgba(24, 26, 39, 0.4);
 	backdrop-filter: blur(2px);
@@ -127,6 +127,19 @@ section {
 	font-size: large;
 }
 
+@media (max-width: 600px) {
+	.hero-card {
+		text-align: center;
+	}
+
+	.neon-divider {
+		display: none;
+	}
+	.hero-card p {
+		display: none;
+	}
+}
+
 .hero-cta {
 	display: flex;
 	gap: 1rem;
@@ -155,6 +168,12 @@ section {
 
 .hero-cta a:hover {
 	box-shadow: 0 0 12px rgba(109, 252, 255, 0.45), 0 0 32px rgba(109, 252, 255, 0.15);
+}
+
+@media (max-width: 426px) {
+	.hero-cta {
+		flex-direction: column;
+	}
 }
 
 .hero-source {
@@ -202,8 +221,13 @@ section {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 1200px;
-	width: 100%;
 	align-items: center;
+}
+
+@media (max-width: 426px) {
+	#about {
+		text-align: center;
+	}
 }
 
 .about-text {
@@ -292,7 +316,6 @@ section {
 
 .project-card {
 	display: grid;
-	grid-template-columns: 280px 1fr;
 	gap: 2rem;
 
 	background: rgba(24, 26, 39, 0.55);
@@ -305,6 +328,17 @@ section {
 	margin: 1rem;
 
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (min-width: 1024px) {
+	.project-card {
+		grid-template-columns: 280px 1fr;
+	}
+}
+
+@media (max-width: 1023px) {
+	.project-card {
+		grid-template-rows: 280px 1fr;
+	}
 }
 
 .project-card:hover {
@@ -357,6 +391,23 @@ section {
 .project-links {
 	display: flex;
 	gap: 1rem;
+}
+
+@media (max-width: 1023px) {
+
+	.project-image img{
+		object-position: top;
+	}
+
+	.project-links {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 426px) {
+	.project-description {
+		display: none;
+	}
 }
 
 .project-links a {
@@ -520,6 +571,12 @@ section {
 	}
 }
 
+@media (max-width:426px) {
+	.timeline-content p{
+		display: none;
+	}
+}
+
 /* ==========================
    Education
 ========================== */
@@ -649,7 +706,6 @@ footer {
 	text-align: center;
 	position: relative;
 }
-
 
 footer a {
 	display: block;
