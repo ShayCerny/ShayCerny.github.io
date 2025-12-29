@@ -56,11 +56,12 @@ section {
 }
 /* ==========================Hero========================== */
 #hero {
-	height: 100vh;
+	height: 100dvh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	margin-bottom: 0;
 }
 .hero-card {
 	width: 70%;
@@ -163,6 +164,11 @@ section {
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 }
+@media (max-width:1024px) {
+	.scroll-indicator{
+		display: none;
+	}
+}
 /* ==========================About========================== */
 #about {
 	display: flex;
@@ -232,7 +238,6 @@ section {
 .skills-grid img {
 	width: 80px;
 	transition: transform 0.3s ease, filter 0.3s ease;
-	filter: grayscale(100%);
 }
 .skills-grid img:hover {
 	transform: scale(1.1);
@@ -242,6 +247,11 @@ section {
 	margin-top: 2rem;
 	text-align: center;
 	font-style: italic;
+}
+@media (min-width: 1024px) {
+	.skills-grid img {
+		filter: grayscale(100%);
+	}
 }
 /* ==========================Projects========================== */
 #projects {
@@ -384,12 +394,12 @@ section {
 /* LEFT items */
 .timeline-item.left {
 	justify-content: flex-start;
-	text-align:right;
+	text-align: right;
 }
 /* RIGHT items */
 .timeline-item.right {
 	justify-content: flex-end;
-	text-align:left;
+	text-align: left;
 }
 /* Timeline content */
 .timeline-content {
@@ -412,7 +422,8 @@ section {
 		right: -20px;
 	}
 }
-.timeline-item.left .timeline-content::before,.timeline-item.right .timeline-content::before {
+.timeline-item.left .timeline-content::before,
+.timeline-item.right .timeline-content::before {
 	content: "";
 	position: absolute;
 	top: 20px;
@@ -462,10 +473,11 @@ section {
 		width: calc(100% - 40px);
 		margin-left: 40px;
 		/* leave space for line */
-		text-align:left !important;
+		text-align: left !important;
 		left: -2px;
 	}
-	.timeline-item.left .timeline-content::before,.timeline-item.right .timeline-content::before {
+	.timeline-item.left .timeline-content::before,
+	.timeline-item.right .timeline-content::before {
 		left: -28px;
 		/* marker connects to line on left */
 	}
@@ -575,8 +587,6 @@ section {
 }
 /* ==========================Footer========================== */
 footer {
-	/* background: #181a27;
-	slightly darker to act like “ground” */
 	color: var(--text-color);
 	padding: 1rem 10vw;
 	margin: 0;
